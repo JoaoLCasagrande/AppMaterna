@@ -11,13 +11,13 @@ export class QuizNutricaoPage implements OnInit {
 
   questions = [
     {
-      question: 'Gestante tem que comer por dois?​',
-      options: ['Verdadeiro','Falso'],
+      question: 'Gestante tem que comer por dois?',
+      options: ['Verdadeiro', 'Falso'],
       answer: 'Falso'
     },
     {
-      question: 'Gestantes devem evitar alguns adoçantes?​',
-      options: ['Verdadeiro','Falso'],
+      question: 'Gestantes devem evitar alguns adoçantes?',
+      options: ['Verdadeiro', 'Falso'],
       answer: 'Verdadeiro'
     }
   ];
@@ -39,8 +39,8 @@ export class QuizNutricaoPage implements OnInit {
   }
 
   async checkAnswer() {
-    let alertMessage;
     const currentQuestion = this.questions[this.currentQuestionIndex];
+    let alertMessage;
 
     if (this.selectedAnswer === currentQuestion.answer) {
       this.correctAnswers++;
@@ -51,15 +51,13 @@ export class QuizNutricaoPage implements OnInit {
 
     let customMessage = '';
 
-    // Aqui você pode definir mensagens personalizadas para cada pergunta
-    switch(this.currentQuestionIndex) {
+    switch (this.currentQuestionIndex) {
       case 0:
-        customMessage = 'Durante a gestação, o aumento das necessidades de vitaminas e minerais é maior do que as energéticas. Por isso, comer em dobro não é indicado e, inclusive, pode resultar em complicações se houver um ganho de peso muito acima do recomendado.​';
+        customMessage = 'Durante a gestação, o aumento das necessidades de vitaminas e minerais é maior do que as energéticas. Por isso, comer em dobro não é indicado e, inclusive, pode resultar em complicações se houver um ganho de peso muito acima do recomendado.';
         break;
       case 1:
-        customMessage = 'A sacarina e o ciclamato devem ser evitados durante a gestação devido a limitação de informações sobre o potencial carcinogênico, o uso na gestação e os efeitos sobre o feto. Assim, caso necessário fazer o uso, é preferível recorrer a outros tipos de adoçantes, como o aspartame ou estévia.​';
+        customMessage = 'A sacarina e o ciclamato devem ser evitados durante a gestação devido a limitação de informações sobre o potencial carcinogênico, o uso na gestação e os efeitos sobre o feto. Assim, caso necessário fazer o uso, é preferível recorrer a outros tipos de adoçantes, como o aspartame ou estévia.';
         break;
-      // Adicione mais cases conforme necessário para mais perguntas
       default:
         customMessage = 'Mensagem padrão para perguntas adicionais';
     }
@@ -72,15 +70,12 @@ export class QuizNutricaoPage implements OnInit {
 
     await alert.present();
 
-    // Limpa a seleção antes de ir para a próxima pergunta
-  this.selectedAnswer = null;
+    this.selectedAnswer = null;
 
-    // Próxima Questão
     this.currentQuestionIndex++;
 
     if (this.currentQuestionIndex < this.questions.length) {
       this.currentQuestion = this.questions[this.currentQuestionIndex];
-      this.selectedAnswer = null; // Limpa a seleção de alternativa
     } else {
       this.showQuizResult();
     }
@@ -91,8 +86,6 @@ export class QuizNutricaoPage implements OnInit {
     const resultMessage = `Você acertou ${this.correctAnswers} / ${totalQuestions}`;
     alert(resultMessage);
 
-    // Redirecionar para a página de exemplo
     this.navCtrl.navigateForward('fim-quiz');
   }
-
 }

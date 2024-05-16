@@ -10,6 +10,10 @@ const routes: Routes = [
   },  {
     path: 'revista',
     loadChildren: () => import('./revista/revista.module').then( m => m.RevistaPageModule)
+  },
+  {
+    path: 'livro-meu',
+    loadChildren: () => import('./livro-meu/livro-meu.module').then( m => m.LivroMeuPageModule)
   }
 
 ];

@@ -4,10 +4,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sobre</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title id="titulo">Para começar...</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p id="text">Por onde deseja seguir?</p>
+    </ion-card-content>
+
+    <ion-button routerLink="/livro" fill="clear">Desejo ler os Livros</ion-button>
+    <ion-button routerLink="/audiobook" fill="clear">Desejo ouvir os audiobooks</ion-button>
+  </ion-card>
+
 </ion-content>
+
