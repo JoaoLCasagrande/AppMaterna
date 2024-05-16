@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./audiobook-meu.page.scss'],
 })
 export class AudiobookMeuPage implements OnInit {
+
+  playAudio() {
+    const audioPlayer = document.getElementById('audioPlayer') as HTMLAudioElement;
+    audioPlayer.play();
+  }
+
+  pauseAudio() {
+    const audioPlayer = document.getElementById('audioPlayer') as HTMLAudioElement;
+    audioPlayer.pause();
+  }
 
   constructor() { }
 

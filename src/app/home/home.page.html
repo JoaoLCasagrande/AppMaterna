@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="rosa-forte">
+    <ion-title> APP Materna </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <img alt="Capa do Aplicativo" src="../../assets/imgs/Capa.jpg" />
+    <ion-card-header>
+      <ion-card-title>Gestação, Vida e Saúde</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p id="text">
+        Aprenda sobre o processo de gestação e a importância da saúde durante a
+        vida.
+      </p>
+    </ion-card-content>
+
+    <div id="botoes">
+      <ion-button routerLink="/audio-livro" expand="full" color="rosa"><p>Livros/Audiobooks</p></ion-button><br>
+      <ion-button routerLink="/quiz" expand="full" color="rosa"><p>Quiz</p></ion-button><br>
+      <ion-button routerLink="/sobre" expand="full" color="rosa"><p>Sobre</p></ion-button><br>
+    </div>
+  </ion-card>
+
 </ion-content>

@@ -1,13 +1,46 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>livro</ion-title>
+  <ion-toolbar color="rosa-fraco">
+    <ion-buttons slot="start">
+      <ion-back-button color="rosa-forte" defaultHref="/audio-livro"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="dark">Livros</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">livro</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content [fullscreen]="true" color="rosa">
+
+  <ion-list>
+    <ion-item routerLink="/revista" lines="full" color="rosa-fraco">
+      <img
+        slot="start"
+        class="ft-livro"
+        src="../../assets/imgs/CapaLivro.jpg"
+      />
+      <ion-label class="ion-text-wrap">
+        <div class="desc">
+          <h3>Revista</h3>
+          <p class="autor">25/01/2013 (BR)</p>
+        </div>
+      </ion-label>
+    </ion-item>
+    </ion-list>
+
+  <ion-list>
+    <ion-item routerLink="/audiobook-meu" lines="full" color="rosa-fraco">
+      <img
+        slot="start"
+        class="ft-livro"
+        src="../../assets/imgs/CapaLivro.jpg"
+      />
+      <ion-label class="ion-text-wrap">
+        <div class="desc">
+          <h3>Gestação, Vida e Saúde</h3>
+          <p class="autor">25/01/2013 (BR)</p>
+        </div>
+      </ion-label>
+    </ion-item>
+    <!-- Gestação, Vida e Saúde -->
+  </ion-list>
+
 </ion-content>
