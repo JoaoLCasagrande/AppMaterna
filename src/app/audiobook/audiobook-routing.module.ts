@@ -10,6 +10,10 @@ const routes: Routes = [
   },  {
     path: 'audiobook-meu',
     loadChildren: () => import('./audiobook-meu/audiobook-meu.module').then( m => m.AudiobookMeuPageModule)
+  },
+  {
+    path: 'audiobook-revista',
+    loadChildren: () => import('./audiobook-revista/audiobook-revista.module').then( m => m.AudiobookRevistaPageModule)
   }
 
 ];

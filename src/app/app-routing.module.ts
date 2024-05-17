@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'referencias',
     loadChildren: () => import('./referencias/referencias.module').then( m => m.ReferenciasPageModule)
   },
+  {
+    path: 'audiobook-revista',
+    loadChildren: () => import('./audiobook/audiobook-revista/audiobook-revista.module').then( m => m.AudiobookRevistaPageModule)
+  },
 
 ];
 

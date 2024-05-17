@@ -1,24 +1,21 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="rosa-fraco">
     <ion-buttons slot="start">
-      <ion-back-button
-        color="rosa-forte"
-        defaultHref="/Audiobook"
-      ></ion-back-button>
+      <ion-back-button color="rosa-forte" defaultHref="/audiobook"></ion-back-button>
     </ion-buttons>
-    <ion-title>Audiobook Meu </ion-title>
+    <ion-title color="dark">Audiobook Gestação</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"  style="--background: linear-gradient(#ff89c4, #ffe0f3);">
 
-  <ion-accordion-group>
-    <ion-accordion value="first">
+  <ion-accordion-group color="light">
+    <ion-accordion value="first" color="light">
       <ion-item slot="header" color="light">
-        <ion-label>Primeiro Capítulo</ion-label>
+        <ion-label>Capitulo 1</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
-        <p>
+        <p style="color: #000;">
           Capítulo 1:<br/>
         </p>
           <audio id="audioPlayer" controls>
@@ -26,28 +23,17 @@
 
             Your browser does not support the audio element.
           </audio><br/>
-
-        <p>
-          Conclusão do Capítulo 1:<br/>
+      </div>
+      <div class="ion-padding" slot="content">
+        <p style="color: #000;">
+          Conclusão Capítulo 1:<br/>
         </p>
           <audio id="audioPlayer" controls>
             <source src="/assets/audios/audiobook-meu/Conclusão_Capitulo_1.mp3" type="audio/mp3" />
 
             Your browser does not support the audio element.
-          </audio>
+          </audio><br/>
       </div>
-    </ion-accordion>
-    <ion-accordion value="second">
-      <ion-item slot="header" color="light">
-        <ion-label>Second Accordion</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Second Content</div>
-    </ion-accordion>
-    <ion-accordion value="third">
-      <ion-item slot="header" color="light">
-        <ion-label>Third Accordion</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Third Content</div>
     </ion-accordion>
   </ion-accordion-group>
 </ion-content>
