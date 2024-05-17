@@ -1,26 +1,71 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="rosa">
+  <ion-toolbar color="rosa-fraco">
     <ion-buttons slot="start">
-      <ion-back-button color="rosa-forte" defaultHref="/audio-livro"></ion-back-button>
+      <ion-back-button
+        color="rosa-forte"
+        defaultHref="/home"
+      ></ion-back-button>
     </ion-buttons>
     <ion-title color="dark">Sobre</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
-
+<ion-content
+  [fullscreen]="true"
+  style="--background: linear-gradient(#ff89c4, #ffe0f3)"
+>
   <ion-card color="light">
     <ion-card-header>
-      <ion-card-title id="titulo">Para começar...</ion-card-title>
+      <ion-card-title class="titulo">Desenvolvimento</ion-card-title>
+    </ion-card-header>
+
+    <div id="foto-curso">
+      <img
+        src="../../assets/imgs/Ciencia_da_Computacao.jpg"
+        alt="Ciência da Computação - Unisagrado"
+      />
+    </div>
+
+    <!--Desenvolvimento-->
+
+    <ion-card-header>
+      <ion-card-title class="titulo">Desenvolvedores</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <p id="text">Por onde deseja seguir?</p>
+      <ul>
+        <ol class="devs">
+          João Luiz Casagrande
+        </ol>
+        <ol class="devs">
+          Kevin Morales Farah
+        </ol>
+        <ol class="devs">
+          João Luiz Casagrande
+        </ol>
+      </ul>
     </ion-card-content>
 
-    <ion-button routerLink="/livro" fill="clear">Desejo ler os Livros</ion-button>
-    <ion-button routerLink="/audiobook" fill="clear">Desejo ouvir os audiobooks</ion-button>
+    <!--Desenvolvedores-->
+
+    <ion-card-header>
+      <ion-card-title class="titulo">Disciplina</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ol class="devs">
+          Desenvolvimento de Software
+        </ol>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title class="titulo">Professor</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ol class="devs">
+          Prof. Dr. Elvio Gilberto da Silva
+        </ol>
+    </ion-card-content>
   </ion-card>
-
 </ion-content>
-
