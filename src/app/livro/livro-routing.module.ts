@@ -7,9 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: LivroPage
-  },  {
-    path: 'revista',
-    loadChildren: () => import('./revista/revista.module').then( m => m.RevistaPageModule)
   },
   {
     path: 'livro-meu',

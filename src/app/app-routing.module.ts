@@ -44,13 +44,10 @@ const routes: Routes = [
     loadChildren: () => import('./quiz/quiz-nutricao/quiz-nutricao.module').then( m => m.QuizNutricaoPageModule)
   },
   {
-    path: 'fim-quiz',
-    loadChildren: () => import('./quiz/fim-quiz/fim-quiz-routing.module').then( m => m.FimQuizPageRoutingModule)
-  },
-  {
     path: 'revista',
-    loadChildren: () => import('./livro/revista/revista.module').then( m => m.RevistaPageModule)
+    loadChildren: () => import('./revista/revista.module').then( m => m.RevistaPageModule)
   },
+
 ];
 
 @NgModule({
