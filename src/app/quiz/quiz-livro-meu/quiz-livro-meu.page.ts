@@ -1,6 +1,6 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quiz-livro-meu',
@@ -47,8 +47,7 @@ export class QuizLivroMeuPage implements OnInit {
   selectedAnswer: string | null;
   correctAnswers = 0;
 
-
-  constructor(private navCtrl: NavController) {
+  constructor(private navCtrl: NavController, private alertController: AlertController) {
     this.selectedAnswer = null;
   }
 
@@ -59,32 +58,55 @@ export class QuizLivroMeuPage implements OnInit {
     this.selectedAnswer = answer;
   }
 
-  checkAnswer() {
-    if (this.selectedAnswer === this.currentQuestion.answer) {
+  async checkAnswer() {
+    const currentQuestion = this.questions[this.currentQuestionIndex];
+    let alertMessage: string;
+    let alertHeader: string;
+
+    if (this.selectedAnswer === currentQuestion.answer) {
       this.correctAnswers++;
-      alert('Resposta Correta!');
+      alertHeader = 'Resposta Correta!';
+      alertMessage = 'Parabéns, você acertou!';
     } else {
-      alert('Resposta errada! A resposta certa é: ' + this.currentQuestion.answer);
+      alertHeader = 'Resposta Errada!';
+      alertMessage = `A resposta correta é: ${currentQuestion.answer}`;
     }
 
-    // Próxima Questão
-    this.currentQuestionIndex++;
+    const alert = await this.alertController.create({
+      header: alertHeader,
+      message: alertMessage,
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          this.currentQuestionIndex++;
+          if (this.currentQuestionIndex < this.questions.length) {
+            this.currentQuestion = this.questions[this.currentQuestionIndex];
+            this.selectedAnswer = null;
+          } else {
+            this.showQuizResult();
+          }
+        }
+      }]
+    });
 
-    if (this.currentQuestionIndex < this.questions.length) {
-      this.currentQuestion = this.questions[this.currentQuestionIndex];
-      this.selectedAnswer = null; // Limpa a seleção de alternativa
-    } else {
-      this.showQuizResult();
-    }
+    await alert.present();
   }
 
-  showQuizResult() {
+  async showQuizResult() {
     const totalQuestions = this.questions.length;
     const resultMessage = `Você acertou ${this.correctAnswers} / ${totalQuestions}`;
-    alert(resultMessage);
 
-    // Redirecionar para a página de exemplo
-    this.navCtrl.navigateForward('fim-quiz');
+    const alert = await this.alertController.create({
+      header: 'Resultado',
+      message: resultMessage,
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          this.navCtrl.navigateForward('fim-quiz');
+        }
+      }]
+    });
+
+    await alert.present();
   }
-
 }

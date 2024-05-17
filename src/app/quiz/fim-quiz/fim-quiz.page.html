@@ -1,9 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="rosa-fraco">
-    <ion-title color="dark">Audiobooks</ion-title>
+  <ion-toolbar color="rosa">
+    <ion-title color="dark">Fim do Quiz</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <p>funciona</p>
+<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
+
+  <ion-card color="light">
+    <ion-card-content>
+      <p id="titulo">Por onde deseja seguir?</p>
+    </ion-card-content>
+
+    <ion-radio-group>
+      <ion-item color="light" routerLink="/livro">
+        <p slot="start">Ir Para os livros</p>
+      </ion-item>
+      <ion-item color="light" routerLink="/quiz">
+        <p slot="start">Fazer um quiz novamente</p>
+      </ion-item>
+      <ion-item color="light" routerLink="/home">
+        <p slot="start">Voltar à página inicial</p>
+      </ion-item>
+      <ion-item color="light" routerLink="/sobre">
+        <p slot="start">Página "sobre" do aplicativo</p>
+      </ion-item>
+    </ion-radio-group>
+  </ion-card>
+
 </ion-content>
+
