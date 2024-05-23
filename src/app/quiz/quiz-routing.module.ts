@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'quiz-fisioterapia',
     loadChildren: () => import('./quiz-fisioterapia/quiz-fisioterapia.module').then( m => m.QuizFisioterapiaPageModule)
+  },
+  {
+    path: 'fim-quiz-nutricao',
+    loadChildren: () => import('./fim-quiz-nutricao/fim-quiz-nutricao.module').then( m => m.FimQuizNutricaoPageModule)
+  },
+  {
+    path: 'fim-quiz-fisioterapia',
+    loadChildren: () => import('./fim-quiz-fisioterapia/fim-quiz-fisioterapia.module').then( m => m.FimQuizFisioterapiaPageModule)
   }
 
 ];

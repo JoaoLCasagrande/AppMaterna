@@ -59,6 +59,14 @@ const routes: Routes = [
     path: 'audiobook-revista',
     loadChildren: () => import('./audiobook/audiobook-revista/audiobook-revista.module').then( m => m.AudiobookRevistaPageModule)
   },
+  {
+    path: 'fim-quiz-nutricao',
+    loadChildren: () => import('./quiz/fim-quiz-nutricao/fim-quiz-nutricao.module').then( m => m.FimQuizNutricaoPageModule)
+  },
+  {
+    path: 'fim-quiz-fisioterapia',
+    loadChildren: () => import('./quiz/fim-quiz-fisioterapia/fim-quiz-fisioterapia.module').then( m => m.FimQuizFisioterapiaPageModule)
+  },
 
 ];
 

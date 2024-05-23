@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="rosa-fraco">
+    <ion-buttons slot="start">
+      <ion-back-button color="rosa-forte" defaultHref="/audiobook"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="dark">Fim Quiz Nutricao</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
+
+  <ion-accordion-group color="light">
+    <ion-accordion value="first" color="light">
+      <ion-item slot="header" color="light">
+        <ion-label>Revista Completa</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p style="color: #000;">
+          Capítulo 1:<br/>
+        </p>
+          <audio id="audioPlayer" controls>
+            <source src="/assets/audios/audiobook-revista/RevistaCompleto.mp3" type="audio/mp3" />
+
+            Your browser does not support the audio element.
+          </audio><br/>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <div id="but-avancar">
+  <ion-button routerLink="fim-quiz" color="rosa-forte" style=" text-transform: uppercase;" >Avançar</ion-button>
+  </div>
+</ion-content>

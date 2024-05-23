@@ -158,7 +158,7 @@ export class QuizNutricaoPage implements OnInit {
       buttons: [{
         text: 'OK',
         handler: () => {
-          this.navCtrl.navigateForward('fim-quiz');
+          this.navCtrl.navigateForward('fim-quiz-nutricao');
         }
       }]
     });

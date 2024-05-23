@@ -190,7 +190,7 @@ export class QuizFisioterapiaPage implements OnInit {
       buttons: [{
         text: 'OK',
         handler: () => {
-          this.navCtrl.navigateForward('fim-quiz');
+          this.navCtrl.navigateForward('fim-quiz-fisioterapia');
         }
       }]
     });
