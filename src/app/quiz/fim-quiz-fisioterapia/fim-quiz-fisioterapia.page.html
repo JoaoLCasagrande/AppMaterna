@@ -3,27 +3,69 @@
     <ion-buttons slot="start">
       <ion-back-button color="rosa-forte" defaultHref="/audiobook"></ion-back-button>
     </ion-buttons>
-    <ion-title color="dark">Fim QUiz Fisioterapia</ion-title>
+    <ion-title color="dark">Referências</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
 
   <ion-accordion-group color="light">
+
     <ion-accordion value="first" color="light">
       <ion-item slot="header" color="light">
-        <ion-label>Revista Completa</ion-label>
+        <ion-label>Referências</ion-label>
       </ion-item>
+
       <div class="ion-padding" slot="content">
         <p style="color: #000;">
-          Capítulo 1:<br/>
+          FREGONA, JULIA MAZZINI. CONHECIMENTO E AÇÃO EDUCATIVA SOBRE A FUNÇÃO DO ASSOALHO PÉLVICO EM UNIVERSITÁRIAS DO CURSO DE FISIOTERAPIA: ESTUDO TRANSVERSAL. 2020. Trabalho de Conclusão de Curso (Graduação em Fisioterapia) - Centro Universitário Sagrado Coração - UNISAGRADO - Bauru - SP, [S. l.], 2014.​<br/>
         </p>
-          <audio id="audioPlayer" controls>
-            <source src="/assets/audios/audiobook-revista/RevistaCompleto.mp3" type="audio/mp3" />
-
-            Your browser does not support the audio element.
-          </audio><br/>
+        <p style="color: #000;">
+          REZENDE, M.F. Obstetrícia fundamental. 11.ed. 2008. cap. 5, p.70-81.<br/>
+        </p>
+        <p style="color: #000;">
+          JERONIMO, A.C.S., JERONIMO, D.S., DE CONTI, M.H.S. Ocorrencia de disfunções dermatológicas em gestantes. Braz. J. Hea. Rev., Curitiba, v. 2, n. 1, p. 304-314, jan./feb. 2019.<br/>
+        </p>
+        <p style="color: #000;">
+          CONSONNI, E.B. et al. A multidisciplinary program of preparation for childbirth and motherhood: maternal anxiety and perinatal outcomes. Reproductive Health, 2010, 7:28​<br/>
+        </p>
+        <p style="color: #000;">
+          Nascimento SL, Surita FG, Godoy AC, Pinto e Silva JL. Recomendações para a prática de exercício físico na gravidez: uma revisão de literatura. Rev Bras Ginecol Obstet, v.36, n.9,p. 423-431; 2014.​​​<br/>
+        </p>
+        <p style="color: #000;">
+          ​Purim MSK, Avelar SMF. Fotoproteção, melasma e qualidade de vida em gestantes. Rev Bras Ginecol Obstet, v. 34, n.5, p. 228-234, 2012​​<br/>
+        </p>
+        <p style="color: #000;">
+          KUMMER. S.C. et al. Evolução do padrão de aleitamento materno. Revista de Saúde Pública, São Paulo, v. 34, n.2, p. 143-148, 2000.<br/>
+        </p>
+        <p style="color: #000;">
+          SANTANA, F. M. et al. Análise da Postura e dos Desconforte de gestantes atendidas pela estratégia saúde da família. Revista de Psicologia, v. 8, n. 22, 2014.​<br/>
+        </p>
+        <p style="color: #000;">
+          PAIVA, T. et al. Gravidez Ativa, Adaptações Fisiológicas e Biomecânicas durante a Gravidez e no Pós Parto. ​<br/>​
+        </p>
+        <p style="color: #000;">
+          Burti JS. et al. Adaptações fisiológicas no período gestacional. Fisioter. Bras. v. 7, n. 5, p. 375-380, 2006.<br/>​
+        </p>
+        <p style="color: #000;">
+          FREGONA, J. M. CONHECIMENTO E AÇÃO EDUCATIVA SOBRE A FUNÇÃO DO ASSOALHO PÉLVICO EM UNIVERSITÁRIAS DO CURSO DE FISIOTERAPIA: ESTUDO TRANSVERSAL. 2020. Trabalho de Conclusão de Curso (Graduação em Fisioterapia) - Centro Universitário Sagrado Coração - UNISAGRADO - Bauru - SP, [S. l.], 2014.​<br/>​
+        </p>
+        <p style="color: #000;">
+          OLIVEIRA, Claudia de; LOPES, Marco Antonio Borges; PEREIRA, Luciana Carla Longo e  and  ZUGAIB, Marcelo. Efeitos da cinesioterapia no assoalho pélvico durante a gravidez. Clinics [online]. 2007, vol.62, n.4, pp.439-446. <br/>​
+        </p>
+        <p style="color: #000;">
+          Herbert J. Pregnancy and childbirth: the effects on pelvic floor muscles. Nursing Times 2009;105(7):38-41. ​<br/>​
+        </p>
+        <p style="color: #000;">
+          Lima, F. R.; Oliveira, N.; GRAVIDEZ E EXERCÍCIO. 2005. Trabalho realizado no Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo (HC-FMUSP). Aprovado, após revisão, em 29/04/2005.<br/>
+        </p>
       </div>
     </ion-accordion>
+
   </ion-accordion-group>
+
+  <div id="but-avancar">
+  <ion-button routerLink="/fim-quiz" color="rosa-forte" style=" text-transform: uppercase;" >Avançar</ion-button>
+  </div>
+
 </ion-content>

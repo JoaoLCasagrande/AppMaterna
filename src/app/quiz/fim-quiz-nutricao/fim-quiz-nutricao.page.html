@@ -1,33 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="rosa-fraco">
-    <ion-buttons slot="start">
-      <ion-back-button color="rosa-forte" defaultHref="/audiobook"></ion-back-button>
-    </ion-buttons>
-    <ion-title color="dark">Fim Quiz Nutricao</ion-title>
+    <ion-title color="dark">Referências</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
 
   <ion-accordion-group color="light">
+
     <ion-accordion value="first" color="light">
       <ion-item slot="header" color="light">
-        <ion-label>Revista Completa</ion-label>
+        <ion-label>Referências</ion-label>
       </ion-item>
+
       <div class="ion-padding" slot="content">
         <p style="color: #000;">
-          Capítulo 1:<br/>
+          BESSA, Marina, 17 mitos e verdades sobre gravidez. Super Interessante, 2019. Disponível em: <https://super.abril.com.br/saude/17-mitos-e-verdades-sobre-gravidez/>. Acesso em: 20 fev. 2021.​MEDEIROS, Tainah. Mitos e verdades sobre a gravidez. Portal Drauzio Varella, 2014. Disponível em: https://drauziovarella.uol.com.br/mulher-2/obstetricia/mitos-sobre-a-gravidez. Acesso em: 20 fev. 2021.<br/>
         </p>
-          <audio id="audioPlayer" controls>
-            <source src="/assets/audios/audiobook-revista/RevistaCompleto.mp3" type="audio/mp3" />
-
-            Your browser does not support the audio element.
-          </audio><br/>
+        <p style="color: #000;">
+          MEDEIROS, Tainah. Mitos e verdades sobre a gravidez. Portal Drauzio Varella, 2014. Disponível em: <https://drauziovarella.uol.com.br/mulher-2/obstetricia/mitos-sobre-a-gravidez/>. Acesso em: 20 fev. 2021.​<br/>
+        </p>
+        <p style="color: #000;">
+          ROCHA, Daniel; CARVALHO, Gildásio. Agentes Teratogênicos. Sistema de Informações sobre Agentes Teratogênicos UFBA. Disponível em: <https://siat.ufba.br/agentes-teratog%C3%AAnicos>. Acesso em: 12 set. 2020.​<br/>
+        </p>
+        <p style="color: #000;">
+          BRASIL. Ministério da Saúde. Secretaria da Saúde. Programa Infância Melhor. Guia da Gestante. 7. ed. – Porto Alegre, RS: Companhia Rio-grandense de Artes Gráficas (CORAG), 2013b. 73 p. Disponível em:<http://primeirainfancia.org.br/wp-content/uploads/2017/01/Guia-da-Gestante-PIM-7a-Edi%C3%A7%C3%A3o.pdf>. Acesso em: 20 fev. 2021.​<br/>
+        </p>
+        <p style="color: #000;">
+          ASSUNCAO, Maria Cecília F.; SANTOS, Iná S.. Efeito da fortificação de alimentos com ferro sobre anemia em crianças: um estudo de revisão. Cad. Saúde Pública,  Rio de Janeiro ,  v. 23, n. 2, p. 269-281,  Feb.  2007 .   Available from <http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-311X2007000200003&lng=en&nrm=iso>. access on  21  Mar.  2021. ​​<br/>
+        </p>
+        <p style="color: #000;">
+          RODRIGUES, H.G. et al . Efeito embriotóxico, teratogênico e abortivo de plantas medicinais. Rev. bras. plantas med.,  Botucatu ,  v. 13, n. 3, p. 359-366,    2011 .   Available from <http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1516-05722011000300016&lng=en&nrm=iso>. access on  15  Mar.  2021​​​<br/>
+        </p>
+        <p style="color: #000;">
+          GOMES, Caroline de Barros et al. Hábitos alimentares das gestantes brasileiras:revisão integrativa da literatura. Ciência & Saúde Coletiva [online]. v. 24, n. 6 [Acessado 21 Março 2021] , pp. 2293-2306. Disponível em: <https://doi.org/10.1590/1413-81232018246.14702017​><br/>
+        </p>
+        <p style="color: #000;">
+          SOUZA FILHO, Manoel Dias de et al . Fortificação das farinhas com ferro e controle da anemia em gestantes de Teresina, Piauí, Brasil. Rev. Nutr.,  Campinas ,  v. 24, n. 5, p. 679-688,  Oct.  2011 .   Available from <http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1415-52732011000500002&lng=en&nrm=iso>. access on  21  Mar.  2021.​<br/>
+        </p>
+        <p style="color: #000;">
+          VITOLO, Márcia Regina. Nutrição: da gestação ao envelhecimento. 1. ed. Rio de Janeiro: Rubio, 2008.<br/>​
+        </p>
       </div>
     </ion-accordion>
+
   </ion-accordion-group>
 
   <div id="but-avancar">
-  <ion-button routerLink="fim-quiz" color="rosa-forte" style=" text-transform: uppercase;" >Avançar</ion-button>
+  <ion-button routerLink="/fim-quiz" color="rosa-forte" style=" text-transform: uppercase;" >Avançar</ion-button>
   </div>
 </ion-content>
