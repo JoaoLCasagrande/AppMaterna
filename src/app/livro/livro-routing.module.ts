@@ -8,10 +8,6 @@ const routes: Routes = [
     path: '',
     component: LivroPage
   },
-  {
-    path: 'livro-meu',
-    loadChildren: () => import('./livro-meu/livro-meu.module').then( m => m.LivroMeuPageModule)
-  }
 
 ];
 

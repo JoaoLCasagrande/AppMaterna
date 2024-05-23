@@ -44,16 +44,16 @@ const routes: Routes = [
     loadChildren: () => import('./quiz/quiz-nutricao/quiz-nutricao.module').then( m => m.QuizNutricaoPageModule)
   },
   {
-    path: 'revista',
-    loadChildren: () => import('./revista/revista.module').then( m => m.RevistaPageModule)
-  },
-  {
     path: 'fim-quiz',
     loadChildren: () => import('./quiz/fim-quiz/fim-quiz.module').then( m => m.FimQuizPageModule)
   },
   {
-    path: 'referencias',
-    loadChildren: () => import('./referencias/referencias.module').then( m => m.ReferenciasPageModule)
+    path: 'audiobook-revista',
+    loadChildren: () => import('./audiobook/audiobook-revista/audiobook-revista.module').then( m => m.AudiobookRevistaPageModule)
+  },
+  {
+    path: 'quiz-fisioterapia',
+    loadChildren: () => import('./quiz/quiz-fisioterapia/quiz-fisioterapia.module').then( m => m.QuizFisioterapiaPageModule)
   },
   {
     path: 'audiobook-revista',

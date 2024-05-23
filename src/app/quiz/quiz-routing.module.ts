@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'quiz-nutricao',
     loadChildren: () => import('./quiz-nutricao/quiz-nutricao.module').then( m => m.QuizNutricaoPageModule)
+  },
+  {
+    path: 'quiz-fisioterapia',
+    loadChildren: () => import('./quiz-fisioterapia/quiz-fisioterapia.module').then( m => m.QuizFisioterapiaPageModule)
   }
 
 ];
