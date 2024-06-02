@@ -1,10 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="rosa-forte">
     <ion-buttons slot="start">
-      <ion-back-button
-        color="rosa-fraco"
-        defaultHref="/home"
-      ></ion-back-button>
+      <ion-back-button color="rosa-fraco" defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title color="dark">Sobre</ion-title>
   </ion-toolbar>
@@ -14,7 +11,7 @@
   [fullscreen]="true"
   style="--background: linear-gradient(#ff89c4, #ffe0f3)"
 >
-  <ion-card color="light">
+  <ion-card id="card" color="light">
     <ion-card-header>
       <ion-card-title class="titulo">Desenvolvimento</ion-card-title>
     </ion-card-header>
@@ -46,17 +43,11 @@
     </ion-card-header>
 
     <ion-card-content>
-      <ul>
-        <ol class="devs">
-          João Luiz Casagrande
-        </ol>
-        <ol class="devs">
-          Kevin Morales Farah
-        </ol>
-        <ol class="devs">
-          Vitor Sanches
-        </ol>
-      </ul>
+      <div class="card">
+        <p class="nome">João Luiz Casagrande</p>
+        <p class="nome">Kevin Morales Farah</p>
+        <p class="nome">Vitor Sanches</p>
+      </div>
     </ion-card-content>
 
     <!--Desenvolvedores-->
@@ -66,9 +57,9 @@
     </ion-card-header>
 
     <ion-card-content>
-        <ol class="devs">
-          Desenvolvimento de Software
-        </ol>
+      <div class="card">
+      <p class="nome">Desenvolvimento de Software</p>
+      </div>
     </ion-card-content>
 
     <ion-card-header>
@@ -76,19 +67,19 @@
     </ion-card-header>
 
     <ion-card-content>
-        <ol class="devs">
-          Prof. Dr. Elvio Gilberto da Silva
-        </ol>
+      <div class="card">
+      <p class="nome">Prof. Dr. Elvio Gilberto da Silva</p>
+      </div>
     </ion-card-content>
 
     <ion-card-header>
-      <ion-card-title class="titulo">Professor Colaborador</ion-card-title>
+      <ion-card-title class="titulo">Professora Colaboradora</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-        <p class="devs">
-          Profa. Dra. Marta Helena Souza De Conti
-        </p>
+      <div class="card">
+      <p class="nome">Profa. Dra. Marta Helena Souza De Conti</p>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
